@@ -193,7 +193,7 @@ def main() -> None:
         "-v",
         "--verbose",
         action="store_true",
-        help=("give more output, including pretty-printed results for each audit step"),
+        help=("provide additional output, including detailed results for each audit step"),
     )
     parser.add_argument(
         "-R", "--report", action="store_true", help="generate a JSON report; uses --output"
