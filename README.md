@@ -171,7 +171,7 @@ yields:
 
 ## Limitations
 
-`abi3audit` is a best-effort tool, with some of the same limitations as
+`abi3audit` is a *best-effort* tool, with some of the same limitations as
 [`auditwheel`](https://github.com/pypa/auditwheel). In particular:
 
 * `abi3audit` cannot check for *dynamic* abi3 violations, such as an extension
@@ -179,10 +179,10 @@ yields:
   to invoke a non-abi3 function at runtime.
 
 * `abi3audit` can confirm the presence of abi3-compatible symbols, but does
-  not have an exhaustive list of abi3-incompatible symbols. Instead, it looks
+  not have an exhaustive list of abi3-*incompatible* symbols. Instead, it looks
   for violations by looking for symbols that start with `Py_` or `_Py_` that
-  are not in the abi3 compatibility list. This is unlikely to result in false
-  positives, but could if an extension incorrectly uses those reserved
+  are not in the abi3 compatibility list. This is *unlikely* to result in false
+  positives, but *could* if an extension incorrectly uses those reserved
   prefixes.
 
 * When auditing a "bare" shared object (e.g. `foo.abi3.so`), `abi3audit` cannot
@@ -192,11 +192,11 @@ yields:
   This can result in false positives, so users are encouraged to audit entire
   wheels or packages instead (since they contain the sufficient metadata).
 
-* `abi3audit` considers the abi3 version when a symbol was stabilized,
-  not introduced. In other words, `abi3audit` will produce a warning
+* `abi3audit` considers the abi3 version when a symbol was *stabilized*,
+  not *introduced*. In other words, `abi3audit` will produce a warning
   when an `abi3-cp36` extension contains a function stabilized in 3.7, even
-  if that function was introduced in 3.6. This is not a false positive
-  (it is an ABI version mismatch), but it is generally not a source of bugs.
+  if that function was introduced in 3.6. This is *not* a false positive
+  (it is an ABI version mismatch), but it's *generally* not a source of bugs.
 
 * `abi3audit` checks both the "local" and "external" symbols for each extension,
   for formats that support both. It does this to catch symbols that have been
