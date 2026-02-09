@@ -33,7 +33,7 @@ This is not an official Trail of Bits product.
 CPython (the reference implementation of Python) defines a stable API and corresponding
 ABI ("`abi3`"). In principle, any CPython extension can be built against this
 API/ABI and will remain forward compatible with future minor versions of CPython.
-In other words: if you build against the stable ABI for Python 3.5, your
+In other words, if you build against the stable ABI for Python 3.5, your
 extension should work without modification on Python 3.9.
 
 The stable ABI simplifies packaging of CPython extensions, since the packager
