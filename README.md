@@ -58,7 +58,7 @@ that controls wheel tagging and the build macros
 ([`Py_LIMITED_API`](https://docs.python.org/3/c-api/stable.html#c.Py_LIMITED_API))
 that actually lock a Python extension into a specific `abi3` version.
 
-As a result: it is very easy to compile a Python extension for the wrong `abi3`
+As a result, it is very easy to compile a Python extension for the wrong `abi3`
 version, or to tag a Python wheel as `abi3` without actually compiling it
 as `abi3`-compatible.
 
@@ -193,7 +193,7 @@ yields:
   wheels or packages instead (since they contain the sufficient metadata).
 
 * `abi3audit` considers the abi3 version when a symbol was stabilized,
-  not introduced. In other words: `abi3audit` will produce a warning
+  not introduced. In other words, `abi3audit` will produce a warning
   when an `abi3-cp36` extension contains a function stabilized in 3.7, even
   if that function was introduced in 3.6. This is not a false positive
   (it is an ABI version mismatch), but it is generally not a source of bugs.
